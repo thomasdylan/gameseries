@@ -10,7 +10,14 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // DB Connection
-
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established sucessfully.');
+  })
+  .catch(err => {
+    console.log('Unable to connect to the database: ', err);
+  })
 
 // Send every request to the React app
 // Define any API routes before this runs
