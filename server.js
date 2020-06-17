@@ -10,8 +10,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // DB Connection
-sequelize
-  .authenticate()
+sequelize.authenticate()
   .then(() => {
     console.log('Connection has been established sucessfully.');
   })
