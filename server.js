@@ -3,6 +3,7 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const sequelize = require("./db/connection");
+const db = require("./models");
 
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
@@ -18,12 +19,17 @@ sequelize.authenticate()
     console.log('Unable to connect to the database: ', err);
   })
 
+// Routes
+app.use('/', require('./routes/index'));
+app.use('/users', require('./routes/users'));
+
 // Send every request to the React app
-// Define any API routes before this runs
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(PORT, function () {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+db.sequelize.sync().then(() => {
+  app.listen(PORT, function () {
+    console.log(`🌎 ==> API server now on port ${PORT}!`);
+  });
 });
