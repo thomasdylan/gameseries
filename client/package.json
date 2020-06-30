@@ -4,8 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
     "mini-create-react-context": "^0.4.0",
     "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.2.0",
