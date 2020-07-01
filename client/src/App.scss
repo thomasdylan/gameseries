@@ -1,5 +1,4 @@
 .App {
-  margin-top: 50px;
   text-align: center;
 }
 
@@ -44,40 +43,27 @@ a {
   color: white;
 }
 
-nav {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin-bottom: 15px;
-
-  ul {
-    text-align: center;
-    list-style-type: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 15px;
-
-    li {
-      display: inline;
-      font-family: 'Fira Sans', sans-serif;
-      font-size: 17px;
-      padding: 14px;
-
-      .nav-link {
-        color: #f2f2f2;
-        text-decoration: none;
-        padding: 14px;
-
-        &:hover {
-          background-color: #111;
-        }
-      }
-    }
-  }
-}
 
 .login {
   background-color: #333;
+  color: whitesmoke;
+  height: 100vh;
+  padding-top: 10px;
+
+  .login-form {
+    width: 50vw;
+    display: inline-block;
+  }
+}
+
+.register {
+  background-color: #333;
+  color: whitesmoke;
+  height: 100vh;
+  padding-top: 10px;
+
+  .register-form {
+    width: 50vw;
+    display: inline-block;
+  }
 }
